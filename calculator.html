@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('calc.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .calculator {
+            border: 1px solid #841b1b;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(235, 38, 38, 0.1);
+        }
+
+        .screen {
+            height: 50px;
+            text-align: right;
+            padding: 10px;
+            background-color: #6c2f2f;
+            color: #39b5ce;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+        }
+
+        button {
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #eee;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        button.operator {
+            background-color: #f44289;
+            color: #fff;
+        }
+
+        button.operator:hover {
+            background-color: #601de5;
+        }
+    </style>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="screen" id="screen">0</div>
+        <div class="buttons" onclick="handleButtonClick(event)">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">-</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="operator" id="equal">=</button>
+            <button class="operator">+</button>
+        </div>
+    </div>
+
+    <script>
+        function handleButtonClick(event) {
+            const screen = document.getElementById('screen');
+
+            if (event.target.matches('button')) {
+                const buttonText = event.target.innerText;
+
+                if (buttonText === '=') {
+                    try {
+                        screen.innerText = eval(screen.innerText);
+                    } catch (error) {
+                        screen.innerText = 'Error';
+                    }
+                } else {
+                    screen.innerText = screen.innerText === '0' ? buttonText : screen.innerText + buttonText;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
