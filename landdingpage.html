@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(239, 239, 241);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav {
+            background-color: #070609;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .background-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeInImage 1s forwards;
+        }
+
+        @keyframes fadeInImage {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .text-container {
+            flex: 1;
+            text-align: center;
+            color: rgb(17, 18, 19);
+            animation: fadeIn 1s ease-in-out; 
+            animation-fill-mode: forwards;
+        }
+
+        .text-container h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            
+        }
+
+        .text-container p {
+            font-size: 1.2em;
+        }
+
+        .background-container img {
+            max-width: 30%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .cards-container {
+            display: flex;
+            /* Arrange cards horizontally */
+            justify-content: space-around;
+            /* Add space around each card */
+            flex-wrap: wrap;
+            /* Allow cards to wrap to the next line if the container is not wide enough */
+        }
+
+        .card {
+            width: 350px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fcf7ff;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+            animation-name: goes;
+            animation-duration: 5s;
+        }
+        @keyframes goes {
+            from{
+               opacity: 0;
+               transform: translateX(20%);
+
+
+            }
+            to{
+               opacity: 1;
+               transform: translateX(0);
+
+            }
+            
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .example {
+            position: relative;
+            overflow: hidden;
+            padding: 15px;
+            border: 3px solid gold;
+            /* Add gold-colored border */
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out;
+            /* Add the animation */
+            animation-fill-mode: forwards;
+        }
+
+        .grey-box {
+            background-color: rgba(244, 243, 243, 0.992);
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        .example h1,
+        .example p {
+            color: rgb(17, 16, 16);
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .example {
+                padding: 10px;
+            }
+        }
+
+        /* Scroll animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .example {
+            opacity: 0;
+            animation: fadeIn 7s ease-out;
+            animation-fill-mode: forwards;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 2s ease, transform 1.5s ease;
+            animation-range: entry 50% cover 50%;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="">About</a>
+        <a href="china.html">Services</a>
+        <a href="Amr.html">Contact</a>
+    </nav>
+    <div class="background-container">
+        <img src="image/webd2.jpg" alt="Food 1">
+        <div class="text-container">
+            <h1>Web Developer</h1>
+            <p>A web developer is a professional responsible for designing, creating, and maintaining websites and web applications. They possess expertise in programming languages such as HTML, CSS, and JavaScript, enabling them to build interactive and visually appealing user interfaces. Web developers work with frameworks and libraries, ensuring efficient and scalable code. They collaborate with designers to translate visual concepts into functional websites, ensuring a seamless user experience. Additionally, web developers are adept at backend development, using server-side languages like PHP, Python, or Node.js to handle data and perform server-side logic. Continuous learning is crucial in this dynamic field, as technologies and best practices evolve rapidly. Web developers often specialize in front-end, back-end, or full-stack development based on their skill set and preferences. Their work contributes to the ever-growing landscape of the internet, shaping the digital presence of businesses and individuals worldwide.</p>
+        </div>
+    </div>
+    <div class="background-container">
+        <img src="image/JJ2.jpg" alt="Food 1">
+        <div class="text-container">
+            <h1>  Language for Web Development</h1>
+            <p>There are several languages that are frequently used for web development. Some of the most popular programming languages for web development include HTML/CSS, PHP, Python, JavaScript, Java, Ruby, and Swift. They possess expertise in programming languages such as HTML, CSS, and JavaScript, enabling them to build interactive and visually appealing user interfaces. Web developers work with frameworks and libraries, ensuring efficient and scalable code. They collaborate with designers to translate visual concepts into functional websites, ensuring a seamless user experience. Additionally, web developers are adept at backend development, using server-side languages like PHP, Python, or Node.js to handle data and perform server-side logic. Continuous learning is crucial in this dynamic field, as technologies and best practices evolve rapidly. Web developers often specialize in front-end, back-end, or full-stack development based on their skill set and preferences. Their work contributes to the ever-growing landscape of the internet, shaping the digital presence of businesses and individuals worldwide.</p>
+        </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="image/html.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>HTML</h2>
+                <p>HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables..</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/php.jpg" alt="Image 2">
+            <div class="card-content">
+                <h2>PHP</h2>
+                <p>PHP is a general-purpose scripting language widely used as a server-side language for creating dynamic web pages. Though its reputation is mixed, PHP is still extremely popular and is used in over 75% of all websites where the server-side programming language is known</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/css.jpg" alt="Image 2">
+            <div class="card-content">
+                <h2>CSS</h2>
+                <p>Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2].</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/js.jpg" alt="Image 2">
+            <div class="card-content">
+                <h2>java script</h2>
+                <p>JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page..</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/react.png" alt="Image 2">
+            <div class="card-content">
+                <h2>react js</h2>
+                <p>React's primary role in an application is to handle the view layer of that application just like the V in a model-view-controller (MVC) pattern by providing the best and most efficient rendering execution. Rather than dealing with the whole user interface as a single unit, React.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/uiux.jpg" alt="Image 2">
+            <div class="card-content">
+                <h2>UI UX DESIGN</h2>
+                <p>ser experience design is a conceptual design discipline rooted in human factors and ergonomics. This field, since the late 1940s, has focused on the interaction between human users, machines, and contextual environments to design systems that address the user's experience.[4] User experience became a positive insight for designers in the early 1990s with the proliferation of workplace computers. Don Norman, a professor and researcher in design, usability, and cognitive science, coined the term "user experience" and brought it to a wider audience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="grey-box"></div>
+        <h1>About HTML</h1>
+        <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo consequat.</p>
+    </div>
+
+    <div class="example">
+        <div class="grey-box"></div>
+        <h1>HTML elements</h1>
+        <p>An HTML element is a type of HTML (HyperText Markup Language) document component, one of several types of HTML nodes (there are also text nodes, comment nodes and others).[vague] The first used version of HTML was written by Tim Berners-Lee in 1993 and there have since been many versions of ..</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo consequat.</p>
+    </div>
+
+    <div class="example">
+        <div class="grey-box"></div>
+        <h1>HTML syntax</h1>
+        <p>In the HTML syntax, most elements are written with a start tag and an end tag, with the content in between. An HTML tag is composed of the name of the element, surrounded by angle brackets.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo consequat.</p>
+    </div>
+
+    <div class="example">
+        <div class="grey-box"></div>
+        <h1>HTML padding</h1>
+        <p>The padding of an element is the space around the content but which still forms part of the element. Padding should not be used to create white space between two elements.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo consequat.</p>
+    </div>
+    <footer>
+        <div>
+            <p>Contact Us:</p>
+            <p>Email: example@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+        <div>
+            <p>Follow Us:</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const revealItems = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            revealItems.forEach(item => {
+                revealObserver.observe(item);
+            });
+        });
+    </script>
+</body>
+
+</html>
